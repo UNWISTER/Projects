@@ -2,7 +2,7 @@
 Programme SAE 105: Traitement de données:
 Fichier: ville_france.csv contenant des informations sur les 36700 Villes de France
 BUT1 : Année 2024-2025
-@author: GIRODON Arthur B2
+@author: UNWISTER
 """
 import math
 
@@ -673,5 +673,6 @@ while fini == False:
         print("\nAppel de la fonction4\n")
     elif choix == 'F':
         fini = True
+
 
 print("Fin du programme")
