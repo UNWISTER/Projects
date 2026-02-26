@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./lib/leaflet/dist/leaflet.css"/>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <script defer src="./js/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./lib/leaflet/dist/leaflet.js"></script>
+    <script defer src="./js/pwa.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>SnowWeather V1</title>
+  </head>
+  <body>
+    <header class="text-center bg-primary text-white p-3">
+      <h1 class="fw-bold" id="retour_accueil">SkiWeather</h1>
+      <div id="container_bouton" class='position-relative top-0 end-0'>
+        <button type="button" class="btn btn-light" id="bouton_favori">Voir les favories</button>
+        <img id="logo_map" class="bouton" src="./img/logo_map.png" alt="logo_map">
+        <img id="logo_menu" class="bouton pas_affiche" src="./img/logo_app.png" alt="logo_menu">
+      </div>
+    </header>
+
+    <div id="menu_favori" class="container-md text-center row">
+    </div>
+    <div id="main_container" class="container-md text-center">
+      <div class="modal fade" id="dialog_install" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Installe vite SkiWeather</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Installe SkiWeather pour être au courant de la météo dans les stations de ski Française !
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="dialog_close" class="btn btn-secondary" data-bs-dismiss="modal">Revenir à la version Web</button>
+              <button type="button" id="install_button" class="btn btn-primary">Installer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="snackbar" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Notification</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Mise à jour détecté ! <button class='btn btn-primary' id="reload_pwa">Recharger la PWA</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notif_hors_ligne" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="./img/attention.jpg" width="20" height="20" class="rounded me-2" alt="logo attention">
+            <strong class="me-auto">Notification</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Attention vous êtes actuellement hors ligne.
+            Certaines fonctionnalité peuvent ne pas fonctionner ou alors être imprécises.
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notif_ajout_favori" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="./img/etoile.png" class="rounded me-2" width="20" height="20" alt="logo etoile">
+            <strong class="me-auto">Notification</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body" id="contenu_notif_fav">
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notif_supp_favori" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="./img/poubelles.png" class="rounded me-2" width="20" height="20" alt="logo etoile">
+            <strong class="me-auto">Notification</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body" id="contenu_notif_supp_fav">
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-8 col-lg-6">
+          <div class="input-group shadow-sm">
+            <button class="btn btn-primary" id="recherche_voix_menu">Rechercher pas la voix</button>
+            <div class="form-floating">
+              <input id="recherche_input" class="form-control" placeholder="Rechercher une station"/>
+              <label for="recherche_input">Chercher une station</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="img_accueil">
+      </div>
+
+      <div id="page_default" class="pas_affiche">
+
+        <div id="res_recherche">
+        </div>
+
+        <canvas id="res_bra"></canvas>
+          <img id="res_enneigement"/>
+
+        <div id="test" class="row">
+          <div class="graph col">
+            <canvas id="pre_enneigement"></canvas>
+              <div id="legende_pre"></div>
+          </div>
+          <div class="graph col">
+            <canvas id="post_enneigement"></canvas>
+            <div id="legende_post"></div>
+          </div>
+        </div>
+
+        <div>
+          <table id="prevision_meteo" class='table table-success table-striped-columns'>
+          </table>
+        </div>
+
+        <div>
+          <table id="more_meteo1" class='table table-success table-striped-columns'>
+          </table>
+        </div>
+        <div>
+          <table id="more_meteo2" class='table table-success table-striped-columns'>
+          </table>
+        </div>
+        <div>
+          <table id="more_meteo3" class='table table-success table-striped-columns'>
+          </table>
+        </div>
+
+      </div>
+    </div>
+    <div id="menu_map" class="pas_affiche">
+      <div class="row justify-content-center mb-2 mt-2">
+      <div class="col-md-8 col-lg-6">
+      <div class="form-floating">
+        <input class="form-control" list="liste_stations_map" id="recherche_input_map" placeholder="Rechercher une station"/>
+        <label for="recherche_input_map">Chercher une station</label>
+      </div>
+
+      <datalist id=liste_stations_map>
+      </datalist>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="active_rayon">Recherche par rayon
+        <p id="rayon_possible"></p>
+      </div>
+      <div id="is_rayon" class="pas_affiche">
+        <input type="range" class="form-range" min="0" max="500" value="0" id="rayon">
+        <output for="rayon" id="rangeValue" aria-hidden="true"></output>
+      </div>
+    </div>
+    </div>
+      <div id="map">
+      </div>
+    </div>
+  </body>
+</html>
