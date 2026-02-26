@@ -1,0 +1,104 @@
+*, *::before, *::after
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.graph {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+
+#legende_pre span
+{
+  display: none;
+}
+
+#legende_post span
+{
+  display: none;
+}
+
+.button
+{
+  background-color: deepskyblue;
+}
+
+#prevision_meteo, #more_meteo1, #more_meteo2, #more_meteo3
+{
+  width: 80%;
+  margin: 10em;
+}
+
+
+
+#container_bouton
+{
+  position: fixed;
+  top: 5em;
+  right: 5em;
+
+}
+
+
+.bouton
+{
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  z-index: 1000000;
+}
+
+.pas_affiche
+{
+  display: none;
+}
+
+#map
+{
+	height: 100vh;
+	width: 100vw;
+}
+
+.card
+{
+  border: none;
+}
+
+.card-img-top
+{
+  height: 250px;
+}
+
+.card
+{
+  transition: transform 0.2s;
+}
+
+.card:hover
+{
+  transform: scale(1.02);
+}
+
+#retour_accueil:hover, #logo_map:hover, #logo_menu:hover
+{
+  cursor: pointer;
+}
+
+
+
+body
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#menu_map, #page_default
+{
+  background-color: white;
+}
