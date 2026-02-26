@@ -1,0 +1,282 @@
+[
+  {
+    "nom": "Morzine",
+    "latitude": 46.18,
+    "longitude": 6.71,
+    "altitude_village": 1000,
+    "altitude_max": 2466,
+    "massif": "Chablais"
+  },
+  {
+    "nom": "Avoriaz",
+    "latitude": 46.187,
+    "longitude": 6.776,
+    "altitude_village": 1800,
+    "altitude_max": 2466,
+    "massif": "Chablais"
+  },
+  {
+    "nom": "Les Gets",
+    "latitude": 46.156,
+    "longitude": 6.667,
+    "altitude_village": 1172,
+    "altitude_max": 2002,
+    "massif": "Chablais"
+  },
+  {
+    "nom": "La Clusaz",
+    "latitude": 45.904,
+    "longitude": 6.426,
+    "altitude_village": 1040,
+    "altitude_max": 2600,
+    "massif": "Aravis"
+  },
+  {
+    "nom": "Le Grand-Bornand",
+    "latitude": 45.944,
+    "longitude": 6.427,
+    "altitude_village": 1000,
+    "altitude_max": 2100,
+    "massif": "Aravis"
+  },
+  {
+    "nom": "Manigod",
+    "latitude": 45.86,
+    "longitude": 6.36,
+    "altitude_village": 1460,
+    "altitude_max": 2100,
+    "massif": "Aravis"
+  },
+  {
+    "nom": "Chamonix",
+    "latitude": 45.923,
+    "longitude": 6.869,
+    "altitude_village": 1035,
+    "altitude_max": 3842,
+    "massif": "Mont-Blanc"
+  },
+  {
+    "nom": "Les Houches",
+    "latitude": 45.893,
+    "longitude": 6.797,
+    "altitude_village": 1000,
+    "altitude_max": 1900,
+    "massif": "Mont-Blanc"
+  },
+  {
+    "nom": "Saint-Gervais",
+    "latitude": 45.892,
+    "longitude": 6.713,
+    "altitude_village": 850,
+    "altitude_max": 2353,
+    "massif": "Mont-Blanc"
+  },
+  {
+    "nom": "Les Saisies",
+    "latitude": 45.757,
+    "longitude": 6.538,
+    "altitude_village": 1650,
+    "altitude_max": 2069,
+    "massif": "Beaufortain"
+  },
+  {
+    "nom": "Arêches-Beaufort",
+    "latitude": 45.685,
+    "longitude": 6.57,
+    "altitude_village": 1080,
+    "altitude_max": 2320,
+    "massif": "Beaufortain"
+  },
+  {
+    "nom": "Val d'Isère",
+    "latitude": 45.449,
+    "longitude": 6.98,
+    "altitude_village": 1850,
+    "altitude_max": 3456,
+    "massif": "Haute-Tarentaise"
+  },
+  {
+    "nom": "Tignes",
+    "latitude": 45.469,
+    "longitude": 6.906,
+    "altitude_village": 2100,
+    "altitude_max": 3456,
+    "massif": "Haute-Tarentaise"
+  },
+  {
+    "nom": "La Rosière",
+    "latitude": 45.626,
+    "longitude": 6.85,
+    "altitude_village": 1850,
+    "altitude_max": 2800,
+    "massif": "Haute-Tarentaise"
+  },
+  {
+    "nom": "Val Thorens",
+    "latitude": 45.297,
+    "longitude": 6.58,
+    "altitude_village": 2300,
+    "altitude_max": 3230,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "Les Menuires",
+    "latitude": 45.324,
+    "longitude": 6.538,
+    "altitude_village": 1850,
+    "altitude_max": 3230,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "Méribel",
+    "latitude": 45.397,
+    "longitude": 6.565,
+    "altitude_village": 1450,
+    "altitude_max": 2952,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "Courchevel",
+    "latitude": 45.415,
+    "longitude": 6.634,
+    "altitude_village": 1850,
+    "altitude_max": 3230,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "La Plagne",
+    "latitude": 45.507,
+    "longitude": 6.677,
+    "altitude_village": 1970,
+    "altitude_max": 3250,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "Les Arcs",
+    "latitude": 45.572,
+    "longitude": 6.808,
+    "altitude_village": 1600,
+    "altitude_max": 3226,
+    "massif": "Vanoise"
+  },
+  {
+    "nom": "Valfréjus",
+    "latitude": 45.17,
+    "longitude": 6.663,
+    "altitude_village": 1550,
+    "altitude_max": 2737,
+    "massif": "Maurienne"
+  },
+  {
+    "nom": "La Norma",
+    "latitude": 45.203,
+    "longitude": 6.687,
+    "altitude_village": 1350,
+    "altitude_max": 2750,
+    "massif": "Maurienne"
+  },
+  {
+    "nom": "Valloire",
+    "latitude": 45.165,
+    "longitude": 6.429,
+    "altitude_village": 1430,
+    "altitude_max": 2750,
+    "massif": "Maurienne"
+  },
+  {
+    "nom": "Valmeinier",
+    "latitude": 45.178,
+    "longitude": 6.483,
+    "altitude_village": 1800,
+    "altitude_max": 2750,
+    "massif": "Maurienne"
+  },
+  {
+    "nom": "Bonneval-sur-Arc",
+    "latitude": 45.372,
+    "longitude": 7.045,
+    "altitude_village": 1800,
+    "altitude_max": 3000,
+    "massif": "Haute-Maurienne"
+  },
+  {
+    "nom": "Alpe d'Huez",
+    "latitude": 45.092,
+    "longitude": 6.07,
+    "altitude_village": 1860,
+    "altitude_max": 3330,
+    "massif": "Grandes-Rousses"
+  },
+  {
+    "nom": "Les Deux Alpes",
+    "latitude": 45.008,
+    "longitude": 6.122,
+    "altitude_village": 1650,
+    "altitude_max": 3600,
+    "massif": "Oisans"
+  },
+  {
+    "nom": "Pelvoux-Vallouise",
+    "latitude": 44.846,
+    "longitude": 6.49,
+    "altitude_village": 1250,
+    "altitude_max": 2300,
+    "massif": "Pelvoux"
+  },
+  {
+    "nom": "Abriès",
+    "latitude": 44.818,
+    "longitude": 6.943,
+    "altitude_village": 1550,
+    "altitude_max": 2400,
+    "massif": "Queyras"
+  },
+  {
+    "nom": "SuperDévoluy",
+    "latitude": 44.694,
+    "longitude": 5.94,
+    "altitude_village": 1500,
+    "altitude_max": 2500,
+    "massif": "Devoluy"
+  },
+  {
+    "nom": "Orcières-Merlette",
+    "latitude": 44.683,
+    "longitude": 6.32,
+    "altitude_village": 1850,
+    "altitude_max": 2725,
+    "massif": "Champsaur"
+  },
+  {
+    "nom": "Pra Loup",
+    "latitude": 44.37,
+    "longitude": 6.595,
+    "altitude_village": 1600,
+    "altitude_max": 2500,
+    "massif": "Ubaye"
+  },
+  {
+    "nom": "Isola 2000",
+    "latitude": 44.187,
+    "longitude": 7.165,
+    "altitude_village": 2000,
+    "altitude_max": 2610,
+    "massif": "Mercantour"
+  },
+  {
+    "nom": "Auron",
+    "latitude": 44.227,
+    "longitude": 6.932,
+    "altitude_village": 1600,
+    "altitude_max": 2450,
+    "massif": "Mercantour"
+  },
+  {
+    "nom": "Valberg",
+    "latitude": 44.095,
+    "longitude": 6.925,
+    "altitude_village": 1700,
+    "altitude_max": 2100,
+    "massif": "Haut-Var Haut-Verdon"
+  }
+]
